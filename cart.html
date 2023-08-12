@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles_cart.css">
+  
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Cart</title>
+   
+  <!--Icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+<!--
+    - HEADER
+  -->
+  <header> 
+    <div class="header-main">
+      <div class="container">
+        <a href="./index.html" class="header-logo">
+          <p style="font-size: 35px;font-weight: 600;color: rgb(251, 113, 159);font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Aura</p> 
+        </a>
+        <nav class="desktop-navigation-menu">
+          <div class="container">
+            <ul class="desktop-menu-category-list">
+                <li class="menu-category">
+                    <a href="./index.html" class="menu-title">Home</a>
+                  </li>     
+        
+                  <li class="menu-category">
+                    <a href="./Mens.html" class="menu-title">Men's</a>
+                  </li>
+        
+                  <li class="menu-category">
+                    <a href="./womens.html" class="menu-title">Women's</a>
+                  </li>
+        
+                  <li class="menu-category">
+                    <a href="./shoes.html" class="menu-title">Shoes</a>
+                  </li>
+        
+                  <li class="menu-category">
+                    <a href="./watches.html" class="menu-title">Watches</a>
+              </li>
+    
+            </ul>
+          </div>
+        </nav>
+        <div class="header-user-actions">
+
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--For Mobile view-->
+    <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+
+       
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+  </header>
+
+<!--MAIN-->
+
+
+<div class="bg-light">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-10 col-11 mx-auto">
+<div class="row mt-5 gx-3">
+<!-- left side div -->
+<div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+<div class="card p-4">
+<h2 class="py-4 font-weight-bold">Cart</h2>
+<div class="row">
+
+<!-- cart images div -->
+<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+<img src="./assets/images/products/jacket-3.jpg" class="img-fluid" alt="cart img">
+</div>
+
+<!-- cart product details -->
+<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+<div class="row">
+<!-- product name  -->
+<div class="col-6 card-title">
+<h3>Men's Winter Leather Jacket</h>
+<select style="font-size: medium;border-radius: 10px;display: inline-block;">
+                <option>Select Size</option>
+                <option>XXL</option>
+                <option>XL</option>
+                <option>Large</option>
+                <option>Medium</option>
+                <option>Small</option>
+              </select>
+</div>
+<!-- quantity inc dec -->
+<div class="col-6">
+<ul class="pagination justify-content-end set_quantity">
+<li class="page-item">
+<button class="page-link " onclick="decreaseNumber('textbox','itemval')">
+<i class="fas fa-minus"></i> </button>
+</li>
+<li class="page-item"><input type="text" name="" class="page-link" value="0" id="textbox" >
+</li>
+<li class="page-item">
+<button class="page-link" onclick="increaseNumber('textbox','itemval')"> <i class="fas fa-plus"></i></button>
+</li>
+</ul>
+</div>
+</div>
+<!-- //remover move and price -->
+<div class="row">
+<div class="col-4 d-flex justify-content-end price_money">
+<h3>Rs<span id="itemval">0.00 </span></h3>
+</div>
+</div>
+</div><br/><br/>
+
+<hr/>
+<br/><br/>
+
+<!-- right side div -->
+<div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+<div class="right_side p-3 shadow bg-white">
+<h2 class="product_name mb-5">The Total Amount Of</h2>
+<div class="price_indiv d-flex justify-content-between">
+<p>Product amount</p>
+<p>Rs<span id="product_total_amt">0.00</span></p>
+</div>
+<div class="price_indiv d-flex justify-content-between">
+<p>Shipping Charge</p>
+<p>Rs<span id="shipping_charge">50.0</span></p>
+</div>
+<hr />
+<div class="total-amt d-flex justify-content-between font-weight-bold">
+<p>The total amount of item:</p>
+<p>Rs<span id="total_cart_amt">0.00</span></p>
+</div><a href="./checkout.html">
+<button class="btn btn-primary text-uppercase">Checkout</button></a>
+</div>
+<!-- discount code part -->
+<div class="discount_code mt-3 shadow">
+<div class="card">
+<div class="card-body">
+<a class="d-flex justify-content-between" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+Add a discount code (optional)
+<span><i class="fas fa-chevron-down pt-1"></i></span>
+</a>
+<div class="collapse" id="collapseExample">
+<div class="mt-3">
+<input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="Enter the discount code">
+
+</div>
+<button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- discount code ends -->
+<div class="mt-3 shadow p-3 bg-white">
+<div class="pt-4">
+<h5 class="mb-4">Expected delivery date</h5>
+<p>August 31st 2023 - September 5th 2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Popper.js first, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+var product_total_amt = document.getElementById('product_total_amt');
+var shipping_charge = document.getElementById('shipping_charge');
+var total_cart_amt = document.getElementById('total_cart_amt');
+var discountCode = document.getElementById('discount_code1');
+const decreaseNumber = (incdec, itemprice1) => {
+var itemval = document.getElementById(incdec);
+var itemprice1 = document.getElementById(itemprice1);
+console.log( itemprice1.innerHTML);
+// console.log(itemval.value);
+if(itemval.value <= 0){
+itemval.value = 0;
+alert('Negative quantity not allowed');
+}else{
+itemval.value = parseInt(itemval.value) - 1;
+itemval.style.background = '#fff';
+itemval.style.color = '#000';
+itemprice1.innerHTML  = parseInt(itemprice1.innerHTML) - 480;
+product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) - 480;
+total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+}
+}
+const increaseNumber = (incdec, itemprice1) => {
+var itemval = document.getElementById(incdec);
+var itemprice1 = document.getElementById(itemprice1);
+// console.log(itemval.value);
+if(itemval.value >= 5){
+itemval.value = 5;
+alert('max 5 allowed');
+itemval.style.background = 'red';
+itemval.style.color = '#fff';
+}else{
+itemval.value = parseInt(itemval.value) + 1;
+itemprice1.innerHTML  = parseInt(itemprice1.innerHTML ) + 480;
+product_total_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + 480;
+total_cart_amt.innerHTML  = parseInt(product_total_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+}
+}
+
+const  discount_code = () => {
+let totalamtcurr = parseInt(total_cart_amt.innerHTML);
+let error_trw = document.getElementById('error_trw');
+if(discountCode.value === 'aura'){
+let newtotalamt = totalamtcurr - 150;
+total_cart_amt.innerHTML = newtotalamt;
+error_trw.innerHTML = "Hurray! code is valid";
+}else{
+error_trw.innerHTML = "Try Again! Valid code is aura";
+}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+
+    <div class="footer-nav">
+
+      <div class="container">
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Fashion</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Electronic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Cosmetic</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Health</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Watches</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
+        </ul>
+  
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="content">
+              419 State 414 Rte
+              Beaver Dams, New York(NY), 14812, USA
+            </address>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
